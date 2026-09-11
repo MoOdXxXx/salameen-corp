@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "Salameen Corporation - Leading Business Solutions",
+    "description": "Salameen Corporation delivers innovative business solutions, digital transformation, and consulting services to enterprises worldwide."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "testimonials": "Testimonials",
+    "contact": "Contact Us"
+  },
+  "hero": {
+    "tagline": "Trusted by Industry Leaders",
+    "title": "Empowering Your Business Growth",
+    "description": "We deliver innovative solutions that drive digital transformation and accelerate your business forward with cutting-edge technology and strategic consulting.",
+    "cta_primary": "Get Started",
+    "cta_secondary": "Our Services"
+  },
+  "about": {
+    "section_label": "About Us",
+    "title": "Who We Are",
+    "description": "Salameen Corporation is a forward-thinking enterprise specializing in digital transformation, IT consulting, and innovative software development. With over a decade of experience, we partner with organizations across industries to deliver solutions that create lasting impact.",
+    "mission_label": "Our Mission",
+    "mission_text": "To empower businesses with technology-driven solutions that unlock growth, efficiency, and competitive advantage.",
+    "stat_1_value": "10+",
+    "stat_1_label": "Years of Experience",
+    "stat_2_value": "200+",
+    "stat_2_label": "Projects Delivered",
+    "stat_3_value": "95%",
+    "stat_3_label": "Client Satisfaction"
+  },
+  "services": {
+    "section_label": "Our Services",
+    "title": "What We Do",
+    "description": "Comprehensive solutions tailored to your business needs.",
+    "items": [
+      {
+        "title": "Digital Transformation",
+        "description": "End-to-end digital transformation strategies that modernize your operations, workflows, and customer experiences.",
+        "icon": "transform"
+      },
+      {
+        "title": "Cloud Solutions",
+        "description": "Scalable cloud architecture, migration, and management services to optimize your infrastructure and reduce costs.",
+        "icon": "cloud"
+      },
+      {
+        "title": "IT Consulting",
+        "description": "Expert technology consulting to align your IT strategy with business goals and maximize ROI on technology investments.",
+        "icon": "consulting"
+      },
+      {
+        "title": "Custom Software",
+        "description": "Tailored software development from concept to deployment, built with modern tech stacks and agile methodologies.",
+        "icon": "software"
+      }
+    ]
+  },
+  "testimonials": {
+    "section_label": "Testimonials",
+    "title": "What Our Clients Say",
+    "description": "Don't just take our word for it. Here's what industry leaders have to say about partnering with Salameen Corporation.",
+    "items": [
+      {
+        "quote": "Salameen Corporation transformed our entire digital infrastructure. Their team delivered beyond our expectations and on schedule.",
+        "author": "Sarah Al-Rashid",
+        "role": "CTO, TechVentures MENA",
+        "avatar": "S"
+      },
+      {
+        "quote": "Their consulting services helped us reduce operational costs by 40% while improving service delivery across all departments.",
+        "author": "Ahmed Hassan",
+        "role": "COO, Global Enterprises",
+        "avatar": "A"
+      },
+      {
+        "quote": "A true technology partner. Their custom software solution streamlined our operations and gave us a significant competitive edge.",
+        "author": "Fatima Al-Zahra",
+        "role": "VP Engineering, InnovateTech",
+        "avatar": "F"
+      }
+    ]
+  },
+  "footer": {
+    "company_description": "Empowering businesses through innovative technology solutions and strategic consulting.",
+    "quick_links": "Quick Links",
+    "contact_info": "Contact Info",
+    "address": "Dubai, United Arab Emirates",
+    "phone": "+971 4 123 4567",
+    "email": "info@salameen-corp.com",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  }
+}

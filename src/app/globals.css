@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply text-gray-800 bg-white;
+  }
+
+  /*
+   * RTL support via CSS logical properties.
+   * When dir="rtl" is set on <html>, Tailwind's logical property utilities
+   * (ms-*, ps-*, me-*, pe-*, start-*, end-*) automatically flip the layout.
+   * We also set font-family per direction so English uses Inter and Arabic uses Cairo.
+   */
+
+  /* English: LTR, Inter font */
+  [dir="ltr"] {
+    font-family: "Inter", sans-serif;
+  }
+
+  /* Arabic: RTL, Cairo font */
+  [dir="rtl"] {
+    font-family: "Cairo", sans-serif;
+  }
+}
+
+@layer components {
+  /* Reusable section container with consistent spacing */
+  .section-container {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Section heading pattern */
+  .section-heading {
+    @apply text-center;
+  }
+
+  .section-label {
+    @apply mb-2 inline-block text-sm font-semibold uppercase tracking-wider text-secondary;
+  }
+
+  .section-title {
+    @apply mb-4 text-3xl font-bold text-primary sm:text-4xl lg:text-5xl;
+  }
+
+  .section-description {
+    @apply mx-auto max-w-2xl text-lg text-gray-600;
+  }
+
+  /* CTA button base styles */
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-lg bg-secondary px-6 py-3
+      text-base font-semibold text-primary shadow-lg transition-all duration-300
+      hover:bg-secondary-600 hover:shadow-xl focus:outline-none focus:ring-2
+      focus:ring-secondary focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-lg border-2 border-white
+      px-6 py-3 text-base font-semibold text-white transition-all duration-300
+      hover:bg-white hover:text-primary focus:outline-none focus:ring-2
+      focus:ring-white focus:ring-offset-2;
+  }
+
+  /* Card component */
+  .card {
+    @apply rounded-xl bg-white p-6 shadow-md transition-all duration-300
+      hover:shadow-lg;
+  }
+
+  /* Smooth gradient overlay for hero */
+  .hero-gradient {
+    @apply absolute inset-0 bg-gradient-to-br from-primary via-primary-800 to-primary-600;
+  }
+}
+
+@layer utilities {
+  /* Animation delay utilities */
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+}
