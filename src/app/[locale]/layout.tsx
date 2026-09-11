@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
+import { hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
@@ -27,8 +28,8 @@ export async function generateMetadata({
 export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;
 
-  // Validate locale; show 404 if invalid
-  if (!routing.locales.includes(locale as "en" | "ar")) {
+  // Validate locale using hasLocale from next-intl
+  if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
 
@@ -46,10 +47,9 @@ export default async function LocaleLayout({ children, params }: Props) {
         />
       </head>
       <body>
-        {/* 
+        {/*
           NextIntlClientProvider makes translations available to client components
-          via the useTranslations hook. The dir prop is used by client components
-          (like the Header) to determine text direction for dynamic content.
+          via the useTranslations hook.
         */}
         <NextIntlClientProvider messages={messages}>
           <div className="flex min-h-screen flex-col">

@@ -1,16 +1,21 @@
 // i18n/request.ts
-// Server-side request config for next-intl. Tells next-intl which locale to use
-// for a given request and where to find the translation JSON files.
+// Server-side request config for next-intl v4 with Next.js 16.
+// Uses next/root-params to read the locale from the route segment.
 
+import * as rootParams from "next/root-params";
+import { notFound } from "next/navigation";
 import { getRequestConfig } from "next-intl/server";
+import { hasLocale } from "next-intl";
 import { routing } from "./routing";
 
-export default getRequestConfig(async ({ requestLocale }) => {
-  let locale = await requestLocale;
-
-  // Validate locale; fall back to default
-  if (!locale || !routing.locales.includes(locale as "en" | "ar")) {
-    locale = routing.defaultLocale;
+export default getRequestConfig(async ({ locale }) => {
+  if (!locale) {
+    const paramValue = await rootParams.locale();
+    if (hasLocale(routing.locales, paramValue)) {
+      locale = paramValue;
+    } else {
+      notFound();
+    }
   }
 
   return {
